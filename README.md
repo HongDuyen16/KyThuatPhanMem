@@ -1,4 +1,4 @@
-<p align="center"><strong>Nhóm 12 môn Kỹ thuật phần mềm</strong></p>
+<h2 align="center"><strong>Nhóm 12 môn Kỹ thuật phần mềm</strong></h2>
 
 ### Đề tài: Web đặt lịch khám cho phòng khám
 
