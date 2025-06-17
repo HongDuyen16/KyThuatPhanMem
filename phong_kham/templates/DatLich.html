@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đặt lịch hẹn</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/DatLich.css') }}">
+</head>
+<body>
+  <div class="appointment-container">
+    <!-- Bên trái: Hình ảnh -->
+    <div class="image-section">
+      <img src="{{ url_for('static', filename='images/2020.png')}}" alt="Bệnh nhân và điều dưỡng" />
+      <img src="{{ url_for('static', filename='images/logo.png')}}" class="logo-overlay" alt="Logo" />
+    </div>
+
+    <!-- Bên phải: Form -->
+    <div class="form-section">
+      <button class="close-btn">&times;</button>
+      <h2>Đặt lịch hẹn</h2>
+
+      <!-- Form gửi về Flask -->
+      <form action="{{ url_for('dat_lich') }}" method="POST">
+        <h3>Thông tin khách hàng</h3>
+        <div class="form-grid">
+          <input type="text" name="ten" placeholder="Họ và Tên" required />
+
+          <select name="hospital_type" required>
+            <option value="">Bệnh viện hay Phòng khám</option>
+            <option value="benhvien">Bệnh viện</option>
+            <option value="phongkham">Phòng khám</option>
+          </select>
+
+          <input type="email" name="email" placeholder="Email" required />
+
+          <select name="department" required>
+            <option value="">Chuyên khoa</option>
+            <option value="phu_san">Phụ sản</option>
+            <option value="nhi">Nhi</option>
+            <option value="tieu_hoa">Tiêu hoá</option>
+          </select>
+
+          <input type="tel" name="phone" placeholder="Số điện thoại" required />
+          <input type="text" name="additional_info" placeholder="Thông tin bổ sung" />
+          <input type="text" name="address" placeholder="Địa chỉ" />
+          
+          <label for="dob">Ngày sinh: </label>
+          <input type="date" name="dob" id="dob" />
+
+          <div class="gender">
+            <label><input type="radio" name="gender" value="nam" /> Nam</label>
+            <label><input type="radio" name="gender" value="nu" /> Nữ</label>
+          </div>
+
+          <div class="date-time">
+            <label>Chọn Ngày và Giờ</label>
+            <input type="datetime-local" name="datetime" required />
+          </div>
+
+          <!-- Thêm chọn bác sĩ -->
+          <label>Chọn bác sĩ:</label>
+          <select name="bacsi_id" required>
+            {% for bs in bacsi_list %}
+              <option value="{{ bs[0] }}">{{ bs[1] }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <!-- reCAPTCHA giả lập -->
+        <div class="recaptcha-placeholder">
+          <input type="checkbox" required />
+          Tôi không phải là người máy
+        </div>
+
+        <p class="note">
+          Bằng cách nhấn nút Đăng ký, tôi xác nhận đã đọc và đồng ý với các
+          <a href="#">Chính Sách Quyền Riêng Tư</a>.
+        </p>
+
+        <button type="submit" class="submit-btn">Đăng Ký</button>
+      </form>
+
+      <!-- Thông báo flash -->
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class="flashes">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+    </div>
+  </div>
+</body>
+</html>

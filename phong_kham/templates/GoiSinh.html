@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gói Sinh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/GoiSinh.css') }}">
+</head>
+<body>
+    <header class="main-header">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+        <span>HP<br><small>Care</small></span>
+    </div>
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+
+      <section class="goi-sinh-section">
+    <h2>Gói sinh</h2>
+    <p>
+      Tại Hạnh Phúc, chúng tôi luôn đặt sự an toàn, sức khỏe và sự thoải mái của bạn lên hàng đầu. 
+      Bạn có thể lựa chọn sinh mổ, phương pháp phẫu thuật lấy thai an toàn, hoặc tuân theo khuyến nghị 
+      của bác sĩ chuyên khoa nếu sinh tự nhiên tiềm ẩn nguy cơ cao.
+    </p>
+    <!-- Gói Sinh -->
+    <div class="goi-container">
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gs1.png')}}" alt="Hình sinh thường">
+        <div class="goi-content">
+          <div class="goi-title">Hạnh Phúc Cát Tường (Sinh thường)</div>
+          <ul>
+            <li>Các dịch vụ trong gói An Nhiên</li>
+            <li>Gói tầm soát 73 bệnh cho trẻ sơ sinh</li>
+            <li>Siêu âm tim cho bé </li>
+            <li>Chiếu tia Plasma lạnh</li>
+            <li>Gói Spa cho mẹ 1 buổi (gội đầu thảo dược + 1 buổi massage cổ, vai, gáy)</li>
+            <li>Ưu tiên nâng hạng phòng</li>
+          </ul>
+          <div class="goi-price">Giá: 39.900.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gs2.png')}}" alt="Hình sinh mổ">
+        <div class="goi-content">
+          <div class="goi-title">Hạnh Phúc Cát Tường (Sinh mổ)</div>
+          <ul>
+            <li>Các dịch vụ trong gói An Nhiên</li>
+            <li>Gói tầm kiểm soát 73 bệnh cho trẻ sơ sinh</li>
+            <li>Siêu âm tim cho bé</li>
+            <li>Gói quay phim Hành trình Hạnh Phúc (chào mừng thành viên mới)</li>
+            <li>Chiếu tia Plasma lạnh</li>
+            <li>Gói Spa cho mẹ 1 buổi (gội đầu thảo dược + massage cổ, vai, gáy)</li>
+            <li>Ưu tiên nâng hạng phòng</li>
+          </ul>
+          <div class="goi-price">Giá: 49.900.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gs3.png')}}" alt="Hình sinh thường 2">
+        <div class="goi-content">
+          <div class="goi-title">Hạnh Phúc An Nhiên (Sinh thường)</div>
+          <ul>
+            <li>Xét nghiệm và theo dõi trước sinh</li>
+            <li>Người thân vào phòng sinh</li>
+            <li>Siêu âm trước sing, điện tâm đồ, theo dõi tim thai, theo dõi cơn gò tử cung</li>
+            <li>Thuốc, dịch truyền tĩnh mạch và vật tư y tế cần thiết</li>
+            <li>Combo đồ dùng cho mẹ và bé</li>
+            <li>Chăm sóc bé mõi đêm từ 19:00 - 7:00</li>
+            <li>Tắm bé, chăm sóc rốn, tiêm vắc-xin BCG (phòng lao), viêm gan B và vitamin K cho bé</li>
+            <li>Khám hậu sản cho mẹ</li>
+            <li>Khám sức khỏe trẻ sơ sinh trong vòng 30 ngay sau sinh</li>
+            <li>Ưu đãi 20% các dịch vụ khác trong quá trình lưu viện</li>
+          </ul>
+          <div class="goi-price">Giá: 29.900.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gs4.png')}}" alt="Hình sinh mổ 2">
+        <div class="goi-content">
+          <div class="goi-title">Hạnh Phúc An Nhiên (Sinh mổ)</div>
+          <ul>
+            <li>Xét nghiệm và theo dõi trước sinh</li>
+            <li>Người thân vào phòng mổ</li>
+            <li>Siêu âm trước sinh, điện tâm đồ, theo dõi tim thai, theo dõi cơn gò tử cung</li>
+            <li>Combo đồ dùng cho mẹ và bé</li>
+            <li>Chăm sóc bé mõi đêm từ 19:00 - 7:00</li>
+            <li>Tắm bé, chăm sóc rốn, tiêm vắc-xin BCG (phòng lao), viêm gan B và vitamin K cho bé</li>
+            <li>Khám hậu sản cho mẹ</li>
+            <li>Khám sức khỏe trẻ sơ sinh trong vòng 30 ngay sau sinh</li>
+            <li>Ưu đãi 20% các dịch vụ khác trong quá trình lưu viện</li>
+          </ul>
+          <div class="goi-price">Giá: 39.900.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- == Footer ==-->
+    <footer class="site-footer">
+    <div class="footer-container">
+        <!-- Cột 1: Logo + thông tin liên hệ -->
+        <div class="footer-col">
+        <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+        <div class="footer-contact">
+            <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+            <hr>
+            <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+        </div>
+        </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>

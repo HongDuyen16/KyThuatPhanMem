@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gói Khám Thai</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/GoiSinh.css') }}">
+</head>
+<body>
+    <header class="main-header">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+        <span>HP<br><small>Care</small></span>
+    </div>
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+
+      <section class="goi-sinh-section">
+    <h2>Gói khám thai</h2>
+    <p>
+      Khám phá nhiều lợi ích đa dạng của các gói thai sản từ các buổi tư vấn trước sinh chuyên sâu đến các dịch vụ hỗ trợ toàn diện
+    </p>
+    <!-- Gói Sinh -->
+    <div class="goi-container">
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gk1.png')}}" alt="Tam cá nguyệt thứ nhất">
+        <div class="goi-content">
+          <div class="goi-title">Tam cá nguyệt thứ nhất (8-13 tuần)</div>
+          <ul>
+            <li>Trong giai đoạn này, cơ thể mẹ đang dần thích nghi với giai đoạn đầu của thai kỳ. Tam cá nguyệt đầu tiên đánh dấu sự phát 
+                triển quan trọng của thai nhi, bao gồm sự phát triển của các cơ quan thiết yếu và sự hình thành nhau thai. Đây cũng là thời 
+                điểm mẹ có thể trải qua các triệu chứng phổ biến như ốm nghén, mệt mỏi, nhưng tất cả đều là dấu hiệu cho thấy con yêu đang lớn lên từng ngày.</li>
+          </ul>
+          <div class="goi-price">Giá: 8.500.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gk2.png')}}" alt="Tam cá nguyệt thứ hai">
+        <div class="goi-content">
+          <div class="goi-title">Tam cá nguyệt thứ hai (14-27 tuần)</div>
+          <ul>
+            <li>Tam cá nguyệt thứ hai thường được xem là giai đoạn dễ chịu nhất trong thai kỳ. Mẹ sẽ cảm thấy bớt mệt mỏi, 
+                tràn đầy năng lượng hơn. Lúc này mẹ bắt đầu  cảm nhận rõ hơn những chuyển động của bé, và bụng bầu cũng dần 
+                lộ rõ. Đây cũng là khoảng thời gian lý tưởng để chuẩn bị cho hành trình sinh nở và chào đón con yêu.</li>
+          </ul>
+          <div class="goi-price">Giá: 6.500.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gkt3.png')}}" alt="Tam cá nguyệt thứ 3">
+        <div class="goi-content">
+          <div class="goi-title">Tam cá nguyệt thứ ba (28-36 tuần)</div>
+          <ul>
+            <li>Bước vào tam cá nguyệt thứ ba, cơ thể mẹ có những thay đổi đáng kể để chuẩn bị cho quá trình sinh nở. Mẹ sẽ 
+                tiếp tục tăng cân, trong khi bé cũng phát triển nhanh chóng. Những triệu chứng như đau lưng, sưng chân có 
+                thể trở nên rõ rệt hơn, khiến mẹ cảm thấy nặng nề. Đây là giai đoạn quan trọng để hoàn tất kế hoạch sinh, 
+                chuẩn bị sẵn sàng cho ngày vượt cạn và quá trình phục hồi sau sinh.</li>
+          </ul>
+          <div class="goi-price">Giá: 7.000.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- == Footer ==-->
+    <footer class="site-footer">
+    <div class="footer-container">
+        <!-- Cột 1: Logo + thông tin liên hệ -->
+        <div class="footer-col">
+        <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+        <div class="footer-contact">
+            <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+            <hr>
+            <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+        </div>
+        </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>
