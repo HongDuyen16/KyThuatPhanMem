@@ -1,0 +1,258 @@
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #1e266d;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #6a5acd;
+}
+
+/* === Header === */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.logo span small {
+  font-size: 14px;
+  color: #888;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e266d;
+}
+
+.main-nav .appointment {
+  color: #7f66ff;
+  font-weight: bold;
+}
+
+.doctor-profile {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.profile-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.profile-left {
+  flex: 1;
+  max-width: 280px;
+  text-align: center;
+}
+
+.doctor-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #5a4fcf;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #453bc1;
+}
+
+.btn-secondary {
+  background-color: #e0e3f5;
+  color: #3f4a9c;
+}
+
+.btn-secondary:hover {
+  background-color: #d3d7f0;
+}
+
+.profile-right {
+  flex: 2;
+  min-width: 300px;
+}
+
+.profile-right h2 {
+  font-size: 26px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.position {
+  color: #7f8c8d;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.profile-right h3 {
+  font-size: 18px;
+  color: #5a4fcf;
+  margin-bottom: 10px;
+}
+
+.profile-right p {
+  line-height: 1.6;
+}
+
+.profile-body h3 {
+  font-size: 20px;
+  margin-top: 30px;
+  color: #34495e;
+}
+
+.profile-body ul {
+  padding-left: 20px;
+  list-style: disc;
+  margin-top: 10px;
+}
+
+.profile-body li {
+  margin-bottom: 8px;
+}
+
+/* === Footer === */
+.site-footer {
+  background-color: #373779;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  padding: 40px 20px 10px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer-logo {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-contact hr {
+  border: none;
+  border-top: 1px solid #ffffff44;
+  margin: 10px 0;
+  width: 80%;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 8px 0;
+}
+
+.footer-col ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.zalo-icon {
+  width: 26px;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #ddd;
+}
