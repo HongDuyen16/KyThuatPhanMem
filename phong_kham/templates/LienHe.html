@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Về chúng tôi - Phòng khám</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/LienHe.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+        <span>HP<br><small>Care</small></span>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+            <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+            <li><a href="BacSi.html">Bác sĩ</a></li>
+            <li><a href="GoiKham.html">Gói khám</a></li>
+            <li><a href="#">IVF Hanh Phuc</a></li>
+            <li><a href="LienHe.html">Liên hệ</a></li>
+            <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+            <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+            <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="banner">
+    <figure>
+        <img src="{{ url_for('static', filename='images/content.jpg')}}" alt="Giới thiệu">
+        <figcaption>
+            Bệnh viện Hạnh Phúc và hệ thống phòng khám của chúng tôi mang đến trải nghiệm chăm sóc sức khỏe đẳng cấp, với tiêu chuẩn cao nhất cho người Việt.
+        </figcaption>
+    </figure>
+</section>
+
+<div class="hospital-card-container">
+    <div class="hospital-image">
+        <img src="{{ url_for('static', filename='images/lienhe1.png')}}" alt="Bệnh viện Quốc tế Hạnh Phúc">
+    </div>
+
+    <div class="hospital-info">
+        <h3>Bệnh viện </h3>
+        <h2>Hạnh Phúc</h2>
+
+        <div class="info-item">
+            <div class="icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <p>
+                Estalla Place, 88 Song Hành, Phường An Phú, TP.Thủ Đức, TP.Hồ Chí Minh
+            </p>
+        </div>
+
+        <div class="info-item">
+            <div class="icon">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <p>
+                1900 6765
+            </p>
+        </div>
+
+        <div class="info-item">
+            <div class="icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <p>
+                Thứ Hai đến Thứ Bảy:<br>
+                8:00 - 20:00<br>
+                Cấp cứu 24/7
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="hospital-card-container">
+    <div class="hospital-image">
+        <img src="{{ url_for('static', filename='images/hotro.png')}}" alt="Phòng khám Quốc tế Hạnh Phúc">
+    </div>
+
+    <div class="hospital-info">
+        <h3>Phòng khám </h3>
+        <h2>Hạnh Phúc</h2>
+
+        <div class="info-item">
+            <div class="icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <p>
+                18 Đại lộ Bình Dương, Thành phố Thuận An, Tỉnh Bình Dương, Việt Nam
+            </p>
+        </div>
+
+        <div class="info-item">
+            <div class="icon">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <p>
+                1900 6765
+            </p>
+        </div>
+
+        <div class="info-item">
+            <div class="icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <p>
+                Thứ Hai đến Thứ Bảy:<br>
+                7:30 - 16:30<br>
+                Chủ Nhật: 8:00-12:00
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="header">
+        <h1>Vị trí</h1>
+    </div>
+    <div class="buttons">
+        <button class="button active" id="btnBenhVien">Bệnh viện Đa khoa Quốc tế Hạnh Phúc</button>
+        <button class="button" id="btnPhongKham">Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estelio)</button>
+    </div>
+    <div class="map-navigation">
+        <span class="map-tab active" id="tabRoadmap">Bản đồ</span>
+        <span class="map-tab" id="tabSatellite">Vệ tinh</span>
+    </div>
+    <div class="map-placeholder">
+        <iframe
+            id="iframeBenhVien"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.805545233157!2d106.73849067503799!3d10.793796389025096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752601ae88b027%3A0xf63587002047d7!2sEstella%20Place!5e0!3m2!1sen!2svi!4v1718021318000!5m2!1sen!2svi"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <iframe
+            id="iframePhongKham"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.0792370725514!2d106.68828557504245!3d10.96349948924041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d6c770c5eb93%3A0xc6960b76e1a49c9!2zMTggxJDhuqFpIGzhu5kgQsOsbmggRMawxqFuZywgUGjGsMahuW5nIFRyw6FpIENoYXUsIFRULiBUaHXhbiBBbiwgQsOsbmggRMawxqFuZywgVmnhu4d0IE5hbQ!5e0!3m2!1sen!2svi!4v1718021318000!5m2!1sen!2svi"
+            width="100%"
+            height="100%"
+            style="border:0; display: none;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+
+<script>
+    // Mã JavaScript để xử lý chuyển đổi giữa hai iframe
+    document.addEventListener('DOMContentLoaded', function() {
+        const btnBenhVien = document.getElementById('btnBenhVien');
+        const btnPhongKham = document.getElementById('btnPhongKham');
+        const iframeBenhVien = document.getElementById('iframeBenhVien');
+        const iframePhongKham = document.getElementById('iframePhongKham');
+
+        // Lấy tham chiếu đến các tab (nếu bạn vẫn muốn giữ chức năng chuyển đổi bản đồ/vệ tinh của các tab này,
+        // thì bạn sẽ cần hai iframe riêng cho bản đồ và vệ tinh cho mỗi địa điểm, hoặc bỏ qua chức năng này).
+        // Tuy nhiên, iframe Embed API đã có sẵn chế độ bản đồ hoặc vệ tinh trong URL src của nó,
+        // nên việc chuyển đổi qua tab sẽ không có tác dụng trực tiếp lên iframe.
+        const tabRoadmap = document.getElementById('tabRoadmap');
+        const tabSatellite = document.getElementById('tabSatellite');
+
+        // Hàm để cập nhật trạng thái active của các nút
+        function updateButtonActiveState(activeButton) {
+            btnBenhVien.classList.remove('active');
+            btnPhongKham.classList.remove('active');
+            activeButton.classList.add('active');
+        }
+
+        // Hàm để cập nhật trạng thái active của các tab bản đồ (chỉ cho mục đích hiển thị CSS)
+        function updateTabActiveState(activeTab) {
+            tabRoadmap.classList.remove('active');
+            tabSatellite.classList.remove('active');
+            activeTab.classList.add('active');
+        }
+
+
+        // Xử lý sự kiện cho các nút
+        btnBenhVien.addEventListener('click', () => {
+            iframeBenhVien.style.display = 'block';
+            iframePhongKham.style.display = 'none';
+            updateButtonActiveState(btnBenhVien);
+            // reset tab state to roadmap as default for benh vien iframe
+            updateTabActiveState(tabRoadmap);
+        });
+
+        btnPhongKham.addEventListener('click', () => {
+            iframeBenhVien.style.display = 'none';
+            iframePhongKham.style.display = 'block';
+            updateButtonActiveState(btnPhongKham);
+            // reset tab state to roadmap as default for phong kham iframe
+            updateTabActiveState(tabRoadmap);
+        });
+
+        // Xử lý sự kiện cho các tab bản đồ/vệ tinh
+        // Lưu ý: Các tab này sẽ chỉ thay đổi trạng thái "active" của chúng,
+        // chứ không thực sự thay đổi loại bản đồ trong iframe vì iframe đã được cấu hình tĩnh.
+        // Để thay đổi loại bản đồ, bạn sẽ cần tạo các iframe riêng cho từng loại bản đồ (roadmap/satellite)
+        // và chuyển đổi chúng, hoặc tiếp tục sử dụng Google Maps JavaScript API.
+        tabRoadmap.addEventListener('click', () => {
+            updateTabActiveState(tabRoadmap);
+            // Nếu bạn muốn thay đổi loại bản đồ của iframe, bạn sẽ cần thay đổi thuộc tính src của nó
+            // Ví dụ:
+            // if (iframeBenhVien.style.display === 'block') {
+            //     iframeBenhVien.src = "https://www.google.com/maps/embed?pb=...&maptype=roadmap";
+            // } else if (iframePhongKham.style.display === 'block') {
+            //     iframePhongKham.src = "https://www.google.com/maps/embed?pb=...&maptype=roadmap";
+            // }
+        });
+
+        tabSatellite.addEventListener('click', () => {
+            updateTabActiveState(tabSatellite);
+            // Tương tự, bạn sẽ cần thay đổi thuộc tính src để hiển thị vệ tinh
+            // if (iframeBenhVien.style.display === 'block') {
+            //     iframeBenhVien.src = "https://www.google.com/maps/embed?pb=...&maptype=satellite";
+            // } else if (iframePhongKham.style.display === 'block') {
+            //     iframePhongKham.src = "https://www.google.com/maps/embed?pb=...&maptype=satellite";
+            // }
+        });
+
+        // Đặt trạng thái ban đầu khi tải trang
+        btnBenhVien.click(); // Giả lập click để hiển thị bản đồ Bệnh viện và đặt trạng thái active
+        tabRoadmap.click(); // Giả lập click để đặt trạng thái active cho tab Bản đồ
+    });
+</script>
+
+<section class="booking-section">
+  <div class="booking-container">
+    <div class="booking-form">
+      <h2>Đặt lịch hẹn</h2>
+      <form action="DatLich.php" method="POST">
+        <div class="form-columns">
+          <!-- Thông tin khách hàng -->
+          <div class="form-column">
+            <h3>Thông tin khách hàng</h3>
+            <input type="text" name="name" placeholder="Họ và Tên" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="tel" name="phone" placeholder="Số điện thoại" required />
+            <input type="text" name="address" placeholder="Địa chỉ" />
+            <input type="date" name="dob" placeholder="Ngày sinh" />
+            <div class="gender">
+              <label><input type="radio" name="gender" value="Nam" /> Nam</label>
+              <label><input type="radio" name="gender" value="Nữ" /> Nữ</label>
+            </div>
+          </div>
+
+          <!-- Chuyên khoa -->
+          <div class="form-column">
+            <h3>Chuyên khoa</h3>
+            <input type="text" name="hospital_type" placeholder="Bệnh viện hay Phòng khám" />
+            <select name="department" required>
+              <option disabled selected value="">Chuyên khoa</option>
+              <option value="Nội tổng quát">Nội tổng quát</option>
+              <option value="Nhi">Nhi</option>
+              <option value="Sản">Sản</option>
+            </select>
+            <textarea name="additional_info" placeholder="Thông tin bổ sung"></textarea>
+
+            <h3>Ngày giờ ưu tiên</h3>
+            <input type="datetime-local" name="appointment_datetime" required />
+
+            <p class="note">
+              Bằng cách nhấn nút đăng ký, tôi xác nhận đã đọc và đồng ý với các
+              <a href="#">Chính Sách Quyền Riêng Tư</a>.
+            </p>
+
+            <button type="submit">Đăng Ký</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Hình ảnh -->
+    <div class="booking-image">
+      <img src="{{ url_for('static', filename='images/datlich.png')}}" alt="Hình ảnh hỗ trợ" />
+    </div>
+  </div>
+</section>
+
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <!-- Cột 1: Logo + thông tin liên hệ -->
+        <div class="footer-col">
+        <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+        <div class="footer-contact">
+            <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+            <hr>
+            <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+        </div>
+        </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>
