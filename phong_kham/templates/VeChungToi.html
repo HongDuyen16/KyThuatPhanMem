@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Về chúng tôi - Phòng khám</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/VeChungToi.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="logo">
+    <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+    <span>HP<br><small>Care</small></span>
+  </div>
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="banner">
+  <figure>
+    <img src="{{ url_for('static', filename='images/about.png')}}" alt="Giới thiệu">
+    <figcaption>
+      DLY Care là hệ thống đặt lịch khám bệnh trực tuyến hiện đại, giúp kết nối bệnh nhân với các phòng khám – bác sĩ một cách dễ dàng, nhanh chóng và tiện lợi.
+      Chúng tôi ra đời với mong muốn mang đến giải pháp chăm sóc sức khỏe chủ động, tiết kiệm thời gian, đặt sự an tâm của bệnh nhân lên hàng đầu.
+    </figcaption>
+  </figure>
+</section>
+
+<section class="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>TẦM NHÌN & SỨ MỆNH</h2>
+      <p>
+        Trở thành nền tảng đặt lịch khám bệnh đáng tin cậy hàng đầu tại Việt Nam, góp phần xây dựng một hệ sinh thái y tế hiện đại, tiện lợi và nhân văn.<br>
+        Đơn giản hóa quá trình khám chữa bệnh bằng công nghệ.<br><br>
+        Giảm thời gian chờ đợi, nâng cao trải nghiệm y tế cho người dân.<br><br>
+        Hỗ trợ các phòng khám trong công tác quản lý và vận hành lịch hẹn hiệu quả.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo DLY Care">
+    </div>
+  </div>
+</section>
+
+<section class="core-values">
+  <h2>Giá trị cốt lõi</h2>
+  <div class="core-items">
+    <div class="core-item">
+      <img src="{{ url_for('static', filename='images/c.png')}}" alt="C for Commitment">
+      <div class="core-text">
+        <p><strong>Commitment:</strong></p>
+        <p>Cam kết</p>
+      </div>
+    </div>
+    <div class="core-item">
+      <img src="{{ url_for('static', filename='images/a.png')}}" alt="A for Accountability">
+      <div class="core-text">
+        <p><strong>Accountability:</strong></p>
+        <p>Trách nhiệm</p>
+      </div>
+    </div>
+    <div class="core-item">
+      <img src="{{ url_for('static', filename='images/r.png')}}" alt="R for Respect">
+      <div class="core-text">
+        <p><strong>Respect:</strong></p>
+        <p>Tôn trọng</p>
+      </div>
+    </div>
+    <div class="core-item">
+      <img src="{{ url_for('static', filename='images/e.png')}}" alt="E for Empathy">
+      <div class="core-text">
+        <p><strong>Empathy:</strong></p>
+        <p>Đồng cảm</p>
+      </div>
+    </div>
+  </div>
+  <p class="core-description">
+    Vì mục tiêu nâng cao sức khỏe và hạnh phúc của tất cả người dân Việt Nam. Tận tâm chăm sóc.
+  </p>
+</section>
+
+<section class="timeline-section">
+  <div class="timeline-container">
+    <div class="timeline-cards-wrapper">
+      <div class="timeline-cards">
+
+        <div class="card" style="background-image: url('{{ url_for('static', filename='images/2017.png') }}');"
+            data-year="2017"
+            data-month="Tháng 1"
+            data-content="Phòng Khám Hạnh Phúc chính thức hoạt động - trở thành phòng khám đầu tiên theo tiêu chuẩn Singapore tại Việt Nam">
+          <div class="card-content">
+            <h3>2017</h3>
+            <p>Phòng Khám Hạnh Phúc chính thức hoạt động - trở thành phòng khám đầu tiên ...<p>
+          </div>
+          <i class="fa-solid fa-circle-chevron-right view-more"></i>
+          <!-- Box chi tiết -->
+          <div class="card-detail-box">
+            <span class="close-detail" style="position:absolute; top:10px; right:15px; cursor:pointer;">×</span>
+            <h4 class="detail-month"></h4>
+            <p class="detail-content"></p>
+          </div>
+        </div>
+        
+        <div class="card" style="background-image: url('{{ url_for('static', filename='images/2018.png') }}');"
+            data-year="2018"
+            data-month="Tháng 11"
+            data-content="Chính thức trở thành đơn vị cung cấp xét nghiệm tiền sản không xâm lấn (NiPT) đầu tiên và duy nhất tại Việt Nam thông qua hợp tác với Ariosa Lab, Hoa Kỳ">
+          <div class="card-content">
+            <h3>2018</h3>
+            <p>Chính thức trở thành đơn vị cung cấp xét nghiệm tiền sản không xâm lấn ...<p>
+          </div>
+          <i class="fa-solid fa-circle-chevron-right view-more"></i>
+          <!-- Box chi tiết -->
+          <div class="card-detail-box">
+            <span class="close-detail" style="position:absolute; top:10px; right:15px; cursor:pointer;">×</span>
+            <h4 class="detail-month"></h4>
+            <p class="detail-content"></p>
+          </div>
+        </div>
+
+        <div class="card" style="background-image: url('{{ url_for('static', filename='images/2019.png') }}');"
+            data-year="2019"
+            data-month="Tháng 10"
+            data-content="Với sự tham gia hợp tác của tập đoàn y khoa Hoàn Mỹ, phòng khám Hạnh Phúc kỳ vọng phát triển những dịch vụ Sản-Nhi, hỗ trợ sinh sản mang thương hiệu Hạnh Phúc đến khắp các tỉnh thành trên cả nước.">
+          <div class="card-content">
+            <h3>2019</h3>
+            <p>Với sự tham gia hợp tác của tập đoàn y khoa Hoàn Mỹ, phòng khám Hạnh Phúc ...<p>
+          </div>
+          <i class="fa-solid fa-circle-chevron-right view-more"></i>
+          <!-- Box chi tiết -->
+          <div class="card-detail-box">
+            <span class="close-detail" style="position:absolute; top:10px; right:15px; cursor:pointer;">×</span>
+            <h4 class="detail-month"></h4>
+            <p class="detail-content"></p>
+          </div>
+        </div>
+
+        <div class="card" style="background-image: url('{{ url_for('static', filename='images/2020.png') }}');"
+            data-year="2020"
+            data-month="Phòng khám Hạnh Phúc nhận giải thưởng tại hạng mục Cải thiện tài chính xuất sắc nhất thuộc Giải thưởng quản lý phòng khám Việt Nam">
+          <div class="card-content">
+            <h3>2020</h3>
+            <p>Phòng khám Hạnh Phúc nhận giải thưởng tại hạng mục Cải thiện tài ...<p>
+          </div>
+          <i class="fa-solid fa-circle-chevron-right view-more"></i>
+          <!-- Box chi tiết -->
+          <div class="card-detail-box">
+            <span class="close-detail" style="position:absolute; top:10px; right:15px; cursor:pointer;">×</span>
+            <h4 class="detail-month"></h4>
+            <p class="detail-content"></p>
+          </div>
+        </div>
+
+        <div class="card" style="background-image: url('{{ url_for('static', filename='images/2021.png') }}');"
+
+            data-year="2021"
+            data-month="Tháng 1"
+            data-content="Phòng khám Hạnh Phúc được Bộ Y tế Việt Nam công nhận là phòng khám Thực hành Nuôi con bằng sữa mẹ xuất sắc.">
+          <div class="card-content">
+            <h3>2021</h3>
+            <p>Phòng khám Hạnh Phúc được Bộ Y tế Việt Nam công nhận là  ...<p>
+          </div>
+          <i class="fa-solid fa-circle-chevron-right view-more"></i>
+          <!-- Box chi tiết -->
+          <div class="card-detail-box">
+            <span class="close-detail" style="position:absolute; top:10px; right:15px; cursor:pointer;">×</span>
+            <h4 class="detail-month"></h4>
+            <p class="detail-content"></p>
+          </div>
+        </div>
+
+        <div class="card" style="background-image: url('{{ url_for('static', filename='images/2022.png') }}');"
+
+            data-year="2022"
+            data-month="Tháng 7"
+            data-content="Trung tâm hỗ trợ sinh sản của phòng khám trở thành Trung tâm hỗ trợ sinh sản đầu tiên tại Việt Nam được chứng nhận RTAC (Reproductive Tecnology Accrefitation Committee), tự hào trở thành trung tâm hàng đầu
+            sở hữu các kỹ thuật và dịch vụ đạt tiêu chuẩn quốc tế.">
+          <div class="card-content">
+            <h3>2022</h3>
+            <p>Trung tâm hỗ trợ sinh sản của phòng khám trở thành Trung tâm hỗ trợ ...<p>
+          </div>
+          <i class="fa-solid fa-circle-chevron-right view-more"></i>
+          <!-- Box chi tiết -->
+          <div class="card-detail-box">
+            <span class="close-detail" style="position:absolute; top:10px; right:15px; cursor:pointer;">×</span>
+            <h4 class="detail-month"></h4>
+            <p class="detail-content"></p>
+          </div>
+        </div>
+
+        <div class="card" style="background-image: url('{{ url_for('static', filename='images/2023.png') }}');"
+            data-year="2023"
+            data-month="Tháng 8"
+            data-content="Trung tâm hỗ trợ sinh sản của phòng khám Hạnh Phúc đi vào hoạt động với hện thống công nghệ, trang thiết bị hiện đại, hiện cung cấp các dịch vụ tư vấn điều trị vô sinh hiếm muốn cho 
+            cả nam và nữ, thực hiện da dạng các phương pháp hộ trợ sinh sản như bơm tinh trùng vào buồng tử cung, TTTON, các thủ thuật nam khoam chuẩn đoán di truyền tiền làm tổ...">
+          <div class="card-content">
+            <h3>2023</h3>
+            <p>Trung tâm hỗ trợ sinh sản của phòng khám Hạnh Phúc đi vào hoạt động với hện thống ...<p>
+          </div>
+          <i class="fa-solid fa-circle-chevron-right view-more"></i>
+          <!-- Box chi tiết -->
+          <div class="card-detail-box">
+            <span class="close-detail" style="position:absolute; top:10px; right:15px; cursor:pointer;">×</span>
+            <h4 class="detail-month"></h4>
+            <p class="detail-content"></p>
+          </div>
+        </div>
+
+        <div class="card" style="background-image: url('{{ url_for('static', filename='images/2024.png') }}');"
+
+            data-year="2024"
+            data-month="Tháng 12"
+            data-content="Phòng khám Hạnh phúc đạt chứng nhận ACHSI Accreditation- tiêu chuẩn chất lượng phòng khánh từ hội đồng Úc về tiêu chuẩn Chăm sóc Sức khỏe Quốc tế.">
+          <div class="card-content">
+            <h3>2024</h3>
+            <p>Phòng khám Hạnh phúc đạt chứng nhận ACHSI Accreditation-  ...<p>
+          </div>
+          <i class="fa-solid fa-circle-chevron-right view-more"></i>
+          <!-- Box chi tiết -->
+          <div class="card-detail-box">
+            <span class="close-detail" style="position:absolute; top:10px; right:15px; cursor:pointer;">×</span>
+            <h4 class="detail-month"></h4>
+            <p class="detail-content"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-controls">
+      <i class="fa-solid fa-arrow-right"></i>
+    </div>
+  </div>
+
+  <!-- Overlay hiển thị chi tiết -->
+<div class="overlay" id="overlay">
+  <div class="overlay-content">
+    <span class="close-btn">&times;</span>
+    <h2 id="overlay-year"></h2>
+    <h3 id="overlay-month"></h3>
+    <p id="overlay-content"></p>
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const viewButtons = document.querySelectorAll('.view-more');
+
+    viewButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const card = e.target.closest('.card');
+        const year = card.getAttribute('data-year');
+        const month = card.getAttribute('data-month') || '';
+        const content = card.getAttribute('data-content') || '';
+
+        // Ẩn tất cả các box chi tiết
+        document.querySelectorAll('.card-detail-box').forEach(box => box.style.display = 'none');
+
+        // Hiển thị box chi tiết
+        const detailBox = card.querySelector('.card-detail-box');
+        detailBox.querySelector('.detail-month').textContent = `${year} - ${month}`;
+        detailBox.querySelector('.detail-content').textContent = content;
+        detailBox.style.display = 'flex';
+
+        // Gắn sự kiện đóng box
+        const closeBtn = detailBox.querySelector('.close-detail');
+        closeBtn.addEventListener('click', () => {
+          detailBox.style.display = 'none';
+        });
+      });
+    });
+
+    // Điều hướng
+    const nextBtn = document.querySelector('.next-btn');
+    const timelineCards = document.querySelector('.timeline-cards');
+    const cards = document.querySelectorAll('.card');
+    let currentIndex = 0;
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex++;
+      if (currentIndex >= cards.length) {
+        currentIndex = 0;
+      }
+      const cardWidth = cards[0].offsetWidth + 20;
+      timelineCards.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
+    });
+  });
+</script>
+
+<section class="doctors-section">
+  <h2 class="section-title">Bác sĩ của chúng tôi</h2>
+  <div class="doctors-container">
+    <div class="doctors-container scroll-x">
+      <div class="doctor-card" onclick="window.location.href='bs1.html'">
+        <img src="{{ url_for('static', filename='images/bs1.png')}}" alt="BS.CKII. Nguyễn Thị Thu Thủy">
+        <div class="doctor-info">
+          <h3>BS.CKII. Nguyễn Thị Thu Thủy</h3>
+          <p>Bác sĩ Tiêu hóa Nhi</p>
+        </div>
+        <div class="overlay1">Tìm hiểu thêm</div>
+      </div>
+
+      <div class="doctor-card" onclick="window.location.href='bs2.html'">
+        <img src="{{ url_for('static', filename='images/bs2.png')}}" alt="ThS.BSCKI. Trần Tấn Lộc">
+        <div class="doctor-info">
+          <h3>ThS.BSCKI. Trần Tấn Lộc</h3>
+          <p>Bác sĩ Ngoại Nhi</p>
+        </div>
+        <div class="overlay1">Tìm hiểu thêm</div>
+      </div>
+
+      <div class="doctor-card" onclick="window.location.href='bs3.html'">
+        <img src="{{ url_for('static', filename='images/bs3.png')}}" alt="BS.CKII. Dương Thanh Hiền">
+        <div class="doctor-info">
+          <h3>BS.CKII. Dương Thanh Hiền</h3>
+          <p>Bác sĩ Sản - Phụ Khoa</p>
+        </div>
+        <div class="overlay1">Tìm hiểu thêm</div>
+      </div>
+
+      <div class="doctor-card" onclick="window.location.href='bs4.html'">
+        <img src="{{ url_for('static', filename='images/bs4.png')}}" alt="TS.BS. Nguyễn Nhật Nam">
+        <div class="doctor-info">
+          <h3>TS.BS. Nguyễn Nhật Nam</h3>
+          <p>Bác sĩ Nội tiết</p>
+        </div>
+        <div class="overlay1">Tìm hiểu thêm</div>
+      </div>
+
+      <div class="doctor-card" onclick="window.location.href='bs5.html'">
+        <img src="{{ url_for('static', filename='images/bs5.png')}}" alt="BS. Trần Kim Dương">
+        <div class="doctor-info">
+          <h3>BS. Trần Kim Dương</h3>
+          <p>Bác sĩ hiếm muộn & hỗ trợ sinh sản</p>
+        </div>
+        <div class="overlay1">Tìm hiểu thêm</div>
+      </div>
+
+      <div class="doctor-card" onclick="window.location.href='bs6.html'">
+        <img src="{{ url_for('static', filename='images/bs6.png')}}" alt="BS.CKI. Lê Thị Ánh">
+        <div class="doctor-info">
+          <h3>BS.CKI. Lê Thị Ánh</h3>
+          <p>Bác sĩ Nhi Khoa</p>
+        </div>
+        <div class="overlay1">Tìm hiểu thêm</div>
+      </div>
+
+      <div class="doctor-card" onclick="window.location.href='bs7.html'">
+        <img src="{{ url_for('static', filename='images/bs7.png')}}" alt="ThS.BS.Hoàng Vũ Khánh Hải">
+        <div class="doctor-info">
+          <h3>ThS.BS.Hoàng Vũ Khánh Hải</h3>
+          <p>Bác sĩ Gây mê hồi sức</p>
+        </div>
+        <div class="overlay1">Tìm hiểu thêm</div>
+      </div>
+
+      <div class="doctor-card" onclick="window.location.href='bs8.html'">
+        <img src="{{ url_for('static', filename='images/bs8.png')}}" alt="ThS.BS.Bùi Thị Trúc My">
+        <div class="doctor-info">
+          <h3>ThS.BS.Bùi Thị Trúc My</h3>
+          <p>Bác sĩ Chuẩn Đoán hình ảnh</p>
+        </div>
+        <div class="overlay1">Tìm hiểu thêm</div>
+      </div>
+
+      <div class="doctor-card" onclick="window.location.href='bs9.html'">
+        <img src="{{ url_for('static', filename='images/bs9.png')}}" alt="BS.CKI. Bùi Thị Thanh Giang">
+        <div class="doctor-info">
+          <h3>BS.CKI. Bùi Thị Thanh GiangKhuê</h3>
+          <p>Bác sĩ điều trị khoa cấp cứu</p>
+        </div>
+        <div class="overlay1">Tìm hiểu thêm</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo + thông tin liên hệ -->
+    <div class="footer-col">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+      <div class="footer-contact">
+        <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+        <hr>
+        <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+      </div>
+    </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>
