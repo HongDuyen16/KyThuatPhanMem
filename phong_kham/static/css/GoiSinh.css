@@ -1,0 +1,245 @@
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #1e266d;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+
+a:hover {
+  color: #6a5acd;
+}
+
+/* === Header === */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.logo span small {
+  font-size: 14px;
+  color: #888;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e266d;
+}
+
+.main-nav .appointment {
+  color: #7f66ff;
+  font-weight: bold;
+}
+
+/* === Gói Sinh === */
+.goi-sinh-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.goi-sinh-section h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #2a2a6c;
+}
+
+.goi-sinh-section p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.goi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.goi-card {
+    background-color: #f6f9ff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+.goi-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.goi-content {
+    padding: 16px 20px;
+}
+
+.goi-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #2a2a6c;
+}
+
+.goi-content ul {
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+.goi-content ul li {
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.goi-price {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.goi-button {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.goi-button a {
+    background-color: #dfe9fc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #2a2a6c;
+    display: inline-block;
+}
+
+.goi-button a i {
+    margin-left: 6px;
+}
+
+/* === Footer === */
+.site-footer {
+  background-color: #373779;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  padding: 40px 20px 10px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer-logo {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-contact hr {
+  border: none;
+  border-top: 1px solid #ffffff44;
+  margin: 10px 0;
+  width: 80%;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 8px 0;
+}
+
+.footer-col ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.zalo-icon {
+  width: 26px;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #ddd;
+}
