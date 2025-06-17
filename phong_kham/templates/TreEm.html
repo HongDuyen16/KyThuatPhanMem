@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trung tâm sức khỏe trẻ em</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/GoiSinh.css') }}">
+</head>
+<body>
+    <header class="main-header">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+        <span>HP<br><small>Care</small></span>
+    </div>
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+
+      <section class="goi-sinh-section">
+    <h2>Trung tâm Sức khỏe trẻ em</h2>
+    <p>
+      Các chuyên gia tại Hạnh Phúc hỗ trợ phụ huynh trong việc cung cấp chăm sốc y tế toàn diện cho con của họ
+    </p>
+    <!-- Gói Sinh -->
+    <div class="goi-container">
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/treem1.png')}}" alt="Gói khám suy dinh dưỡng">
+        <div class="goi-content">
+          <div class="goi-title">Gói khám suy dinh dưỡng</div>
+          <ul>
+            <li>Hạnh Phúc mang đến gói khám suy dinh dưỡng được thiết lập cá nhân hóa cho từng trẻ, đảm bảo cân nặng và sức khỏe 
+                của trẻ được duy trì ở mức cân đối và phù hợp với độ tuổi</li>
+          </ul>
+          <div class="goi-price">Giá: 4.330.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/treem2.png')}}" alt="Gói vắc-xin cho trẻ từ 0 – 1 tuổi">
+        <div class="goi-content">
+          <div class="goi-title">Gói khám thừa cân – béo phì</div>
+          <ul>
+            <li>Gói khám thừa cân – béo phì tại Hạnh Phúc sẽ đưa ra kế hoạch chăm sóc cá nhân hóa riêng cho từng bé với 3 lần tư vấn trực tiếp cùng bác sĩ Dinh Dưỡng 
+                để hỗ trợ trẻ kiểm soát cân nặng một cách an toàn.</li>
+          </ul>
+          <div class="goi-price">Giá: 3.600.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- == Footer ==-->
+    <footer class="site-footer">
+    <div class="footer-container">
+        <!-- Cột 1: Logo + thông tin liên hệ -->
+        <div class="footer-col">
+        <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+        <div class="footer-contact">
+            <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+            <hr>
+            <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+        </div>
+        </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>
