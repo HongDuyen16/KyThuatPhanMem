@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hỗ trợ sinh sản</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/GoiSinh.css') }}">
+</head>
+<body>
+    <header class="main-header">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+        <span>HP<br><small>Care</small></span>
+    </div>
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+
+      <section class="goi-sinh-section">
+    <h2>Trung tâm hỗ trợ sinh sản</h2>
+    <p>
+      Hạnh Phúc tự hào giúp đỡ hàng nghìn khách hàng thực hiện ước mơ trở thành cha mẹ
+    </p>
+    <!-- Gói Sinh -->
+    <div class="goi-container">
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gk4.png')}}" alt="Gói trữ đông">
+        <div class="goi-content">
+          <div class="goi-title">Gói trữ đông 05 trứng – 01 năm</div>
+          <ul>
+            <li>Bệnh nhân sẽ được chăm sóc toàn diện từ các xét nghiệm ban đầu cho đến việc thu thập và trữ đông trứng. 
+                Gói dịch vụ này đã bao gồm việc trữ 05 trứng trong thời gian 01 năm, với toàn bộ quá trình điều trị trong khoảng 2-3 tuần.</li>
+          </ul>
+          <div class="goi-price">Giá: 11.544.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gk4.png')}}" alt="Gói trữ đông">
+        <div class="goi-content">
+          <div class="goi-title">Gói trữ đông 10 trứng – 01 năm</div>
+          <ul>
+            <li>Bệnh nhân sẽ được chăm sóc toàn diện từ các xét nghiệm ban đầu cho đến việc 
+                thu thập và trữ đông trứng. Gói dịch vụ này đã bao gồm việc trữ 10 trứng trong thời gian 01 năm, với toàn bộ quá trình điều trị trong khoảng 2-3 tuần.</li>
+          </ul>
+          <div class="goi-price">Giá: 17.538.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gk4.png')}}" alt="Gói trữ đông">
+        <div class="goi-content">
+          <div class="goi-title">Gói trữ đông 15 trứng – 01 năm</div>
+          <ul>
+            <li>Bệnh nhân sẽ được chăm sóc toàn diện từ các xét nghiệm ban đầu cho đến việc thu thập và trữ đông trứng. Gói dịch vụ này đã bao gồm việc trữ 
+                15 trứng trong thời gian 01 năm, với toàn bộ quá trình điều trị trong khoảng 2-3 tuần.</li>
+          </ul>
+          <div class="goi-price">Giá: 25.641.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gk4.png')}}" alt="Gói trữ đông">
+        <div class="goi-content">
+          <div class="goi-title">Gói trữ đông 10 trứng – 03 năm</div>
+          <ul>
+            <li>Bệnh nhân sẽ được chăm sóc toàn diện từ các xét nghiệm ban đầu cho đến việc thu thập và trữ đông trứng. Gói dịch vụ này đã bao gồm việc trữ 10 trứng trong 
+                thời gian 03 năm, với toàn bộ quá trình điều trị trong khoảng 2-3 tuần.</li>
+          </ul>
+          <div class="goi-price">Giá: 21.534.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+      
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gk4.png')}}" alt="Gói trữ đông">
+        <div class="goi-content">
+          <div class="goi-title">Gói trữ đông 15 trứng – 03 năm</div>
+          <ul>
+            <li>Bệnh nhân sẽ được chăm sóc toàn diện từ các xét nghiệm ban đầu cho đến việc thu thập và trữ đông trứng. Gói dịch vụ này 
+                đã bao gồm việc trữ 15 trứng trong thời gian 03 năm, với toàn bộ quá trình điều trị trong khoảng 2-3 tuần.</li>
+          </ul>
+          <div class="goi-price">Giá: 29.637.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/hotro1.png')}}" alt="Gói Khám Sức khỏe Sinh sản">
+        <div class="goi-content">
+          <div class="goi-title">Gói Khám Sức khỏe Sinh sản</div>
+          <ul>
+            <li>Hành trình tìm con của mỗi cặp vợ chồng bắt đầu với một đánh giá toàn diện về sức khỏe sinh sản. Với gói Khám Sức khỏe 
+                Sinh sản, đội ngũ bác sĩ và chuyên gia sẽ thực hiện các xét nghiệm nội tiết, siêu âm chuyên sâu và tư vấn phác đồ điều trị tối ưu. </li>
+          </ul>
+          <div class="goi-price">Giá: 8.720.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/hotro2.png')}}" alt="Gói Kích thích Buồng trứng">
+        <div class="goi-content">
+          <div class="goi-title">Gói Kích thích Buồng trứng</div>
+          <ul>
+            <li>Cơ thể người mẹ sẽ được hỗ trợ bằng phác đồ kích thích buồng trứng để tạo ra những nang trứng khỏe mạnh, tạo điều kiện tối ưu cho quá trình thụ thai. 
+                Mỗi nang trứng là một mầm sống quý giá, được nuôi dưỡng và phát triển trong điều kiện tối ưu.</li>
+          </ul>
+          <div class="goi-price">Giá: 4.710.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/gk4.png')}}" alt="Gói Chọc hút Trứng và Tạo Phôi">
+        <div class="goi-content">
+          <div class="goi-title">Gói trữ đông 10 trứng – 03 năm</div>
+          <ul>
+            <li>Sau giai đoạn kích thích buồng trứng, đội ngũ y Bác sĩ, chuyên gia sẽ tiến hành thực hiện chọc hút trứng, lấy trứng ra 
+                khỏi cơ thể của người vợ. Trứng sau đó sẽ được kết hợp với tinh trùng của người chồng trong môi trường nuôi cấy tối ưu để tạo phôi.</li>
+          </ul>
+          <div class="goi-price">Giá: 57.050.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+      <div class="goi-card">
+        <img src="{{ url_for('static', filename='images/hotro3.png')}}" alt="Gói Chuyển Phôi Trữ đông">
+        <div class="goi-content">
+          <div class="goi-title">Gói Chuyển Phôi Trữ đông</div>
+          <ul>
+            <li>Sau khi trứng được thụ tinh và phát triển thành phôi, những phôi chất lượng tốt nhất sẽ được bảo quản bằng phương pháp đông lạnh để 
+                sử dụng trong tương lai. Khi người mẹ sẵn sàng về mặt sức khỏe và nội mạc tử cung đạt điều kiện lý tưởng, phôi sẽ được rã đông và chuyển vào tử cung để làm tổ và phát triển.</li>
+          </ul>
+          <div class="goi-price">Giá: 19.520.000đ</div>
+          <div class="goi-button"><a href="#">Xem chi tiết gói <i class="fa-solid fa-circle-chevron-right"></i></a></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- == Footer ==-->
+    <footer class="site-footer">
+    <div class="footer-container">
+        <!-- Cột 1: Logo + thông tin liên hệ -->
+        <div class="footer-col">
+        <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+        <div class="footer-contact">
+            <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+            <hr>
+            <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+        </div>
+        </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>
