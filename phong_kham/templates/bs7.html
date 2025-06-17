@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bác sĩ Hoàng Vũ Khánh Hải</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bs.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+      <span>HP<br><small>Care</small></span>
+    </div>
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+  </header>
+
+<div class="doctor-profile">
+  <div class="profile-header">
+    <div class="profile-left">
+      <img src="{{ url_for('static', filename='images/bs7.png')}}" alt="Bác sĩ Hoàng Vũ Khánh Hải" class="doctor-img">
+      <div class="action-buttons">
+        <a href="{{ url_for('dat_lich') }}" class="btn-primary">Đặt lịch hẹn</a>
+        <a href="#" class="btn-secondary">Quay lại trang tìm kiếm</a>
+      </div>
+    </div>
+
+    <div class="profile-right">
+      <h2>ThS.BS> Hoàng Vũ Khánh Hải</h2>
+      <p class="position">Bác sĩ Gây mê hồi sức</p>
+
+      <p>
+       Bác sĩ Hoàng Vĩ Khánh Hải tốt nghiệp Bác sĩ đa khoa tại trường Đại học Y Dược Huế vào năm 2014, 
+       là bác sĩ gây mê, hồi sức và giảm đau với hơn 10 năm kinh nghiệm trong nghề. Bác sĩ Hải đã gây mê thành công, hỗ trợ kiểm soát các cơn đau trong
+       quá trình sinh của nhiểu sản phụ, giảm đau an toàn cho nhiều người bệnh trong suốt thời gian làm việc của mình.
+      </p>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo + thông tin liên hệ -->
+    <div class="footer-col">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+      <div class="footer-contact">
+        <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+        <hr>
+        <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+      </div>
+    </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>

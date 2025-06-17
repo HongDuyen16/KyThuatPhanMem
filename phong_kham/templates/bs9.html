@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bác sĩ Bùi Thị Thanh Giang</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bs.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+      <span>HP<br><small>Care</small></span>
+    </div>
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+  </header>
+
+<div class="doctor-profile">
+  <div class="profile-header">
+    <div class="profile-left">
+      <img src="{{ url_for('static', filename='images/bs9.png')}}" alt="Bác sĩ Bùi Thị Thanh Giang" class="doctor-img">
+      <div class="action-buttons">
+        <a href="{{ url_for('dat_lich') }}" class="btn-primary">Đặt lịch hẹn</a>
+        <a href="#" class="btn-secondary">Quay lại trang tìm kiếm</a>
+      </div>
+    </div>
+
+    <div class="profile-right">
+      <h2>BS.CKI. Bùi Thị Thanh Giang</h2>
+      <p class="position">Bác sĩ Tiêu hóa Nhi</p>
+      <p>
+        Bác sĩ Bùi Thị Thanh Giang tốt nghiệp Bác sĩ Chuyên khoa I tại Đại Học Y Dược TP HCM vào năm 2017 với hơn 10 năm kinh nghiệm điều trị các trường hợp cấp cứu và được người bệnh
+         cùng đồng nghiệp yêu quý bởi sự nhiệt tâm, nhiệt tình trong mọi hoạt động của bệnh viện và cộng đồng, được đánh giá cao bởi chuyên môn y khoa sâu rộng, không ngừng học hỏi và
+          trau dồi kinh nghiệm qua các chương trình, hội thảo khoa học.
+      </p>
+
+      <div class="profile-body">
+        <h3>Chứng nhận và thành tựu</h3>
+        <ul>
+          <li>Chứng chỉ cấp cứu tổng hợp</li>
+          <li>Chứng chỉ siêu âm bụng tổng quát</li>
+          <li>Đọc điểm tâm đồ 2013</li>
+          <li>Bằng Chuyên khoa dinh dưỡng tiết chế tại Trung tâm dinh dưỡng TP HCM 2020</li>
+          <li> Chứng chỉ lớp quản lý bệnh viện</li>
+          <li>Chứng chỉ an toàn tiêm chủng 2021</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo + thông tin liên hệ -->
+    <div class="footer-col">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+      <div class="footer-contact">
+        <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+        <hr>
+        <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+      </div>
+    </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>
