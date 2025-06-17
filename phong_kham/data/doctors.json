@@ -1,1 +1,58 @@
-
+[
+  {
+    "id": "bs1",
+    "name": "BS.CKII. Nguyễn Thị Thu Thủy",
+    "specialization": "Nhi khoa",
+    "description": "Bác sĩ Tiêu hóa Nhi",
+    "image": "../images/bs1.png"
+  },
+  {
+    "id": "bs2",
+    "name": "ThS.BSCKI. Trần Tấn Lộc",
+    "specialization": "Nhi khoa",
+    "description": "Bác sĩ Ngoại Nhi",
+    "image": "../images/bs2.png"
+  },
+  {
+    "id": "bs3",
+    "name": "BS.CKII. Dương Thanh Hiền",
+    "specialization": "Sản Phụ Khoa",
+    "description": "Bác sĩ Sản - Phụ Khoa",
+    "image": "../images/bs1.png"
+  },
+  {
+    "id": "bs4",
+    "name": "TS.BS. Nguyễn Nhật Nam",
+    "specialization": "Chuyên tư vấn, khám và điều trị:",
+    "description": "Bác sĩ Nội tiết",
+    "image": "../images/bs4.png"
+  },
+  {
+    "id": "bs5",
+    "name": "BS. Trần Kim Dương",
+    "specialization": "Hỗ trợ sinh sản",
+    "description": "Bác sĩ hiếm muộn & hỗ trợ sinh sản",
+    "image": "../images/bs5.png"
+  },
+  {
+    "id": "bs6",
+    "name": "BS.CKI. Lê Thị Ánh",
+    "specialization": "Nhi khoa",
+    "description": "Bác sĩ Nhi khoa",
+    "image": "../images/bs6.png"
+  },
+  {
+    "id": "bs8",
+    "name": "ThS.BS. Bùi Thị Trúc My",
+    "specialization": "Chứng nhận và thành tựu",
+    "description": "Bác sĩ Chuẩn Đoán hình ảnh",
+    "image": "../images/bs8.png"
+  },
+  {
+    "id": "bs9",
+    "name": "BS.CKI. Bùi Thị Thanh Giang",
+    "specialization": "Chứng nhận và thành tựu",
+    "description": "Bác sĩ Tiêu hóa Nhi",
+    "image": "../images/bs9.png"
+  }
+]
