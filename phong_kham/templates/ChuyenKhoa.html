@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chuyên Khoa</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ChuyenKhoa.css') }}">
+</head>
+<body>
+<header class="main-header">
+  <div class="logo">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Hanh Phuc">
+    <span>HP<br><small>Care</small></span>
+  </div>
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="banner">
+  <figure>
+    <img src="{{ url_for('static', filename='images/about.png') }}" alt="Giới thiệu">
+    <figcaption>
+     Bắt đầu hành trình chăm sóc sức khỏe của bạn tại Phòng khám Hạnh PHúc. Từ việc chăm sóc sức khỏe phụ nữ,
+     hiện thực hóa ước mơ làm cha mẹ, đến nuôi dưỡng sự phát triển toadn diện cho thế hệ tương lai, Hạnh Phúc cung cập dịch
+     vụ y tế trọn vẹn và uy tín. Các chuyên khoa thế mạnh của chúng tôi, bao gồm Sản phụ khoa, Nhi khoa, Hỗ trợ sinh
+     sản(IVF), Phẫu thuật Thẩm mỹ và Phẫu thuật tổng quả, đều được đầu tư trang thiết bị hiện đại, công nghệ chuẩn 
+     đoán tiên tiến, cùng đội ngũ y bác sĩ giàu king nghiệm nhằm mang đến chất lượng chắm sóc tốt nhất.
+    </figcaption>
+  </figure>
+</section>
+
+  <!-- === DIV lớn chứa các box === -->
+  <div class="specialty-container">
+
+    <!-- === BOX 1: Sản phụ khoa === -->
+    <div class="specialty-box">
+      <img src="{{ url_for('static', filename='images/spk.png') }}" alt="Sản phụ khoa">
+      <h3>Sản Phụ khoa</h3>
+      <p>Chăm sóc toàn diện cho mẹ và bé từ thai kỳ đến sinh nở và hậu sản.</p>
+      <button class="view-more" data-modal="modal-ob">
+        <i class="fa-solid fa-circle-chevron-right"></i> Xem chi tiết
+      </button>
+    </div>
+
+    <!-- === BOX 2: Nhi khoa === -->
+    <div class="specialty-box">
+      <img src="{{ url_for('static', filename='images/nhikhoa.png') }}" alt="Nhi khoa">
+      <h3>Nhi khoa</h3>
+      <p>Khám và điều trị cho trẻ từ sơ sinh đến vị thành niên với đội ngũ bác sĩ giàu kinh nghiệm.</p>
+      <button class="view-more" data-modal="modal-nhi">
+        <i class="fa-solid fa-circle-chevron-right"></i> Xem chi tiết
+      </button>
+    </div>
+
+    <div class="specialty-box">
+      <img src="{{ url_for('static', filename='images/hotro.png') }}" alt="Hỗ trợ sinh sản">
+      <h3>Hỗ trợ sinh sản</h3>
+      <p>Trung tâm Hỗ trợ Sinh sản Hạnh Phúc - địa chỉ tin cật giúp các cặp vợ chồng gắp khó khắn trong việc thụ thai trải nghiệm niềm vui làm cha mẹ</p>
+      <button class="view-more" data-modal="modal-hotro">
+        <i class="fa-solid fa-circle-chevron-right"></i> Xem chi tiết
+      </button>
+    </div>
+
+    <div class="specialty-box">
+      <img src="{{ url_for('static', filename='images/doanhnghiep.png') }}" alt="Khám sức khỏe doanh nghiệp">
+      <h3>Khám sức khỏe doanh nghiệp</h3>
+      <p>Đảm bảo sức khỏe và năng suất làm việc cho nhân viên của bạn với gói khám sức khỏa doanh nghiệp tại phòng khám Hanh Phúc.</p>
+      <button class="view-more" data-modal="modal-doanhnghiep">
+        <i class="fa-solid fa-circle-chevron-right"></i> Xem chi tiết
+      </button>
+    </div>
+    <div class="specialty-box">
+      <img src="{{ url_for('static', filename='images/tongquat.png') }}" alt="Khám sức khỏe tổng quát">
+      <h3>Khám sức khỏe tổng quát dành cho doanh nhân</h3>
+      <p>Sức khỏe vẹn toàn với dịch vụ kiểm tra sức khỏe cao cấp tại Phòng khám Hạnh Phúc</p>
+      <button class="view-more" data-modal="modal-tongquat">
+        <i class="fa-solid fa-circle-chevron-right"></i> Xem chi tiết
+      </button>
+    </div>
+
+    <div class="specialty-box">
+      <img src="{{ url_for('static', filename='images/taohinh.png') }}" alt="Phẫu thuật Tạo hình - Thẩm mỹ">
+      <h3>Phẫu thuật Tạo hình - Thẩm mỹ</h3>
+      <p>Đánh thức vẻ đẹp tiềm ẩn với đội ngũ bác sĩ phẫu thuật thẩm mỹ giàu kinh nghiệm tại Phòng khám Hạnh Phúc</p>
+      <button class="view-more" data-modal="modal-taohinh">
+        <i class="fa-solid fa-circle-chevron-right"></i> Xem chi tiết
+      </button>
+    </div>
+
+    <div class="specialty-box">
+      <img src="{{ url_for('static', filename='images/tieuhoa.png') }}" alt="Tiêu hóa">
+      <h3>Tiêu hóa</h3>
+      <p>Đội ngũ chuyên gia tiêu hóa và trực tràng của chúng tôi cung cấp giải pháp điều trị toàn diện cho các vấn đề về tiêu hóa.</p>
+      <button class="view-more" data-modal="modal-tieuhoa">
+        <i class="fa-solid fa-circle-chevron-right"></i> Xem chi tiết
+      </button>
+    </div>
+  </div>
+
+  <!-- === MODAL 1: Sản phụ khoa === -->
+  <div id="modal-ob" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Sản Phụ khoa</h2>
+      <p>Tại Khoa Sản Phụ khoa, chúng tôi đồng hành cùng phụ nữ trên hành trình gìn giữ và nâng niu sức khỏe qua từng giai đoạn cuộc sống. 
+        Với đội ngũ bác sĩ giàu kinh nghiệm, tận tâm và chuyên nghiệp cùng hệ thống trang thiết bị hiện đại, Khoa Sản Phụ khoa cam kết mang 
+        đến dịch vụ chăm sóc sức khỏe toàn diện, giúp bạn luôn an tâm, thoải mái để phục hồi và tái tạo năng lượng. Lắng nghe nhu cầu và 
+        thấu hiểu tâm tư của khách hàng, đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm của chúng tôi hân hạnh mang đến dịch vụ chăm sóc và tư vấn 
+        toàn diện các vấn đề về sức khỏe phụ nữ, bao gồm:</p>
+      <div class="modal-grid">
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/1.png') }}" alt="">
+            <h4>Chăm sóc thai sản: </h4>
+            <p>Hạnh Phúc đồng hành cùng mẹ bầu và mẹ mới sinh với các dịch vụ chăm sóc thai sản trọn gói chất lượng cao, từ chăm sóc tiền sản, 
+                trong quá trình sinh con, cho đến chăm sóc sau sinh. Bên cạnh đó, chúng tôi mang đến các lớp học tiền sản hàng tháng, các buổi 
+                hướng dẫn cho con bú và điều trị các vấn đề thường gặp khi cho con bú.</p>
+          </div>
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/2.png') }}" alt="">
+            <h4>Khám sàng lọc sức khỏe tổng quát cho phụ nữ:</h4>
+            <p>Phòng bệnh luôn là lựa chọn tối ưu so với việc chữa bệnh. Chúng tôi cung cấp các dịch vụ tầm soát sức khỏe toàn diện, hỗ trợ bạn 
+                theo dõi và duy trì sức khỏe thể chất lẫn tinh thần hiệu quả.</p>
+          </div>
+        </div>
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/3.png') }}" alt="">
+            <h4>Chăm sóc sức khỏe sinh sản và phụ khoa:</h4>
+            <p>Hạnh Phúc cung cấp các dịch vụ khám chuyên sâu và tư vấn dành riêng cho từng nhu cầu cụ thể của phái đẹp, đảm bảo chẩn đoán chính xác 
+                để hỗ trợ điều trị theo từng trường hợp.</p>
+          </div>
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/4.png') }}" alt="">
+            <h4>Khám sàng lọc ung thư vú & phụ khoa:</h4>
+            <p>Chúng tôi tập trung vào việc phát hiện sớm và chăm sóc dự phòng, thực hiện các chương trình tầm soát ung thư vú và ung thư phụ khoa. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === MODAL 2: Nhi khoa === -->
+  <div id="modal-nhi" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Nhi khoa</h2>
+      <p>Khoa Nhi tại Bệnh viện Quốc tế Hạnh Phúc mang đến dịch vụ chăm sóc toàn diện và chuyên sâu cho trẻ sơ sinh và trẻ em. Đội ngũ chuyên gia 
+        nhi khoa của chúng tôi cam kết tận tâm vì sức khỏe và sự phát triển của trẻ, với phương pháp điều trị được tùy chỉnh cho từng đối tượng và 
+        cách tiếp cận lấy trẻ em làm trung tâm. Dịch vụ của chúng tôi bao gồm:</p>
+      <div class="modal-grid">
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/5.png') }}" alt="">
+            <h4>Dịch vụ Khám bệnh Ngoại trú Nhi khoa:</h4>
+            <p>Hạnh Phúc cung cấp các dịch vụ y tế đa dạng, đáp ứng nhu cầu chăm sóc sức khỏe của trẻ trong ngày mà không cần lưu viện qua đêm, như 
+                tư vấn sức khỏe tổng quát, khám sức khỏe sàng lọc và tư vấn.</p>
+          </div>
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/6.png') }}" alt="">
+            <h4>Da liễu & Dị ứng:</h4>
+            <p>Là chuyên gia trong lĩnh vực chẩn đoán và điều trị các bệnh về da và dị ứng, Hạnh Phúc cung cấp các giải pháp hiệu quả cho vấn đề về
+                da liễu của trẻ.</p>
+          </div>
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/7.png') }}" alt="">
+            <h4>Tư vấn Phát triển Trẻ em:</h4>
+            <p>Chúng tôi đồng hành cùng cha mẹ trên hành trình nuôi dạy con, chia sẻ những thông tin dinh dưỡng thiết yếu, kiến thức chuyên sâu và lời
+                khuyên hữu ích, giúp trẻ phát triển qua từng cột mốc quan trọng.</p>
+          </div>
+        </div>
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/8.png') }}" alt="">
+            <h4>Khám Sơ sinh & Tiêm chủng:</h4>
+            <p>Hạnh Phúc cung cấp dịch vụ khám sức khỏe toàn diện cho trẻ sơ sinh và tiêm phòng vắc-xin nhiều bệnh lý khác nhau để trẻ luôn khỏe mạnh
+                và phát triển toàn diện.</p>
+          </div>
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/9.png') }}" alt="">
+            <h4>Vật lý trị liệu Nhi khoa:</h4>
+            <p>Đối với các trường hợp cần can thiệp vật lý trị liệu, Hạnh Phúc cung cấp dịch vụ chăm sóc cá nhân để hỗ trợ trẻ phục hồi và nâng cao sức 
+                khỏe thể chất.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === MODAL 3: Hỗ trợ sinh sản === -->
+  <div id="modal-hotro" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Hỗ trợ sinh sản</h2>
+      <p>Trung tâm Hỗ trợ Sinh sản Hạnh Phúc là trung tâm hỗ trợ sinh sản đầu tiên tại Việt Nam đạt được chứng nhận RTAC kể từ năm 2014. Chứng nhận 
+        này đóng vai trò như kim chỉ nam cho việc quản lý và nâng cao chất lượng hoạt động trong lĩnh vực hỗ trợ sinh sản, được Ủy ban Chứng nhận chất 
+        lượng về Kỹ thuật sinh sản (RTAC) thuộc Hiệp hội Sinh sản Úc (FSA) xây dựng và thẩm định. Các tiêu chuẩn chất lượng của RTAC nằm trong số những 
+        tiêu chí uy tín nhất về Kỹ thuật hỗ trợ sinh sản ở khu vực châu Á - Thái Bình Dương. Trung tâm Hỗ trợ Sinh sản Hạnh Phúc đã hỗ trợ nhiều cặp vợ 
+        chồng hiếm muộn có được niềm vui trở thành cha mẹ. Đội ngũ bác sĩ, kỹ thuật viên và điều dưỡng của trung tâm đều được đào tạo bài bản và hướng 
+        dẫn bởi các chuyên gia đầu ngành đến từ Singapore. Chúng tôi cung cấp các dịch vụ sau:</p>
+      <div class="modal-grid">
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/11.png') }}" alt="">
+            <h4>Dịch vụ Lâm sàng:</h4>
+            <p>Chúng tôi đánh giá tình trạng hiếm muộn của cả nam và nữ, với đa dạng các lựa chọn điều trị, bao gồm: Thụ tinh nhân tạo (IUI), Thụ tinh 
+                ống nghiệm (IVF), Tiêm tinh trùng vào bào tương trứng (ICSI), Trữ đông phôi thai và chuyển phôi (FET), hỗ trợ phôi thoát màng 
+                (Assisted hatching), và nuôi cấy phôi nang (Blastocyst culture).</p>
+          </div>
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/12.png') }}" alt="">
+            <h4>Dịch vụ Nam khoa:</h4>
+            <p>Chúng tôi đánh giá tình trạng vô tinh trùng và mang đến nhiều lựa chọn điều trị, bao gồm: Kỹ thuật trích tinh trùng từ mào tinh và Kỹ 
+                thuật trích tinh trùng từ mô tinh hoàn (TESE)</p>
+          </div>
+        </div>
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/13.png') }}" alt="">
+            <h4>Dịch vụ Phòng xét nghiệm chuyên sâu:</h4>
+            <p>Chúng tôi mang đến dịch vụ xét nghiệm chuyên dụng như phân tích tinh dịch, chuẩn bị tinh trùng cho Thụ tinh nhân tạo (IUI) và Ngân hàng 
+                tinh trùng dành cho người bệnh.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === MODAL 4: Khám sức khỏe Doanh nghiệp === -->
+  <div id="modal-doanhnghiep" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Khám sức khỏe Doanh nghiệp</h2>
+      <p>Kiểm tra sức khỏe định kỳ đóng vai trò quan trọng trong việc duy trì sức khỏe và tinh thần, giúp phát hiện sớm các tình trạng bệnh lý và 
+        vấn đề sức khỏe ngay từ giai đoạn đầu. Tại Hạnh Phúc, bạn có thể chủ động chăm sóc sức khỏe nhân viên và xây dựng môi trường làm việc lành 
+        mạnh, năng suất hơn. Dịch vụ của chúng tôi bao gồm:</p>
+      <div class="modal-grid">
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/9.png') }}" alt="">
+            <h4>Khám Sức khỏe Định kỳ:</h4>
+            <p>Các gói khám sức khỏe doanh nghiệp của Hạnh Phúc được thiết kế linh hoạt để đáp ứng nhu cầu của từng tổ chức, dựa trên các yếu tố như 
+                tuổi, giới tính, tiền sử gia đình và các yếu tố rủi ro cá nhân.</p>
+          </div>
+        </div>
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/4.png') }}" alt="">
+            <h4>Khám Sức khỏe Tuyển dụng:</h4>
+            <p>Dịch vụ khám sức khỏe tuyển dụng hỗ trợ bạn và ứng viên tiềm năng đáp ứng đầy đủ các yêu cầu theo quy định. Tìm hiểu thêm các xét nghiệm 
+                đa dạng mà chúng tôi cung cấp:</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === MODAL 5: Khám sức khỏe tổng quát dành cho Doanh nhân === -->
+  <div id="modal-tongquat" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Khám sức khỏe tổng quát dành cho Doanh nhân</h2>
+      <p>Lối sống bận rộn, lịch làm việc không đều, cùng với thói quen ăn uống thất thường và ít vận động là những yếu tố ảnh hưởng tiêu cực đến sức 
+        khỏe của bạn. Do đó, việc phát hiện và can thiệp sớm để phòng ngừa và kiểm soát các bệnh như tiểu đường, huyết áp cao, béo phì và bệnh tim 
+        mạch ngày càng trở nên quan trọng.</p>
+      <p>Chương trình khám sức khỏe tổng quát dành cho doanh nhân tại Bệnh viện Quốc tế Hạnh Phúc được thiết kế nhằm giúp đánh giá toàn diện về 
+            sức khỏe của bạn. Chúng tôi thực hiện nhiều loại xét nghiệm bao gồm đánh giá sức khỏe tim mạch, xét nghiệm chức năng gan, nhóm máu 
+            ABO-Rh, đường huyết, kiểm tra răng hàm mặt và tai mũi họng, chụp X-quang ngực, điện tâm đồ, khám mắt và tầm soát ung thư. Các xét nghiệm 
+            này đặc biệt có lợi với phụ nữ từ 30 đến 60 tuổi vì đây là độ tuổi có nguy cơ cao mắc các bệnh lý trên.</p>
+    </div>
+  </div>
+
+  <!-- === MODAL 6: Phẫu thuật Tạo hình - Thẩm mỹ === -->
+  <div id="modal-taohinh" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Phẫu thuật Tạo hình - Thẩm mỹ</h2>
+      <p>Khoa Phẫu thuật Tạo hình - Thẩm mỹ tại Bệnh viện Quốc tế Hạnh Phúc mang đến các dịch vụ làm đẹp toàn diện, giúp bạn sở hữu ngoại hình rạng 
+        ngời và cuốn hút. Đội ngũ bác sĩ phẫu thuật thẩm mỹ đầy kinh nghiệm và tận tâm của chúng tôi luôn nỗ lực mang đến chất lượng chăm sóc cao nhất, 
+        giúp bạn đạt được kết quả thẩm mỹ như mong muốn. Bên cạnh đó, Hạnh Phúc mang đến các phương pháp thẩm mỹ không xâm lấn, bao gồm chất làm đầy da 
+        và laser tái tạo bề mặt da.</p>
+        <p>Tại Khoa Phẫu thuật Tạo hình - Thẩm mỹ, chúng tôi thấu hiểu rằng mỗi khách hàng có nhu cầu và mục tiêu riêng. Chúng tôi lắng nghe từng mong muốn, 
+            băn khoăn và xây dựng phác đồ điều trị cá nhân hóa nhằm đáp ứng nhu cầu và hỗ trợ bạn đưa ra quyết định chính xác nhất. Dịch vụ của chúng tôi bao gồm:</p>
+      <div class="modal-grid">
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/7.png') }}" alt="">
+            <h4>Hút mỡ:</h4>
+            <p>Đây là thủ thuật được thực hiện cho cả nam và nữ, giúp định hình cơ thể bằng cách loại bỏ vĩnh viễn các mô mỡ cục bộ, giảm thiểu các phần 
+                mỡ thừa và cải thiện đường nét cơ thể.</p>
+          </div>
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/6.png') }}" alt="">
+            <h4>Nâng mũi:</h4>
+            <p>Đây là thủ thuật giúp cải thiện hình dáng của mũi hoặc được thực hiện với mục đích hỗ trợ các vấn đề về hô hấp.</p>
+          </div>
+        </div>
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/9.png') }}" alt="">
+            <h4>Thu hẹp tầng sinh môn:</h4>
+            <p>Đây là thủ thuật nhằm thắt chặt và định hình lại ngã âm đạo bằng cách loại bỏ các mô sẹo và các vết lồi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- === MODAL 6: Tiêu hóa === -->
+  <div id="modal-tieuhoa" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Tiêu hóa</h2>
+      <p>Tại Hạnh Phúc, đội ngũ chuyên gia tiêu hóa và đại tràng có kinh nghiệm và kỹ năng cao luôn tận tâm mang đến dịch vụ chăm sóc toàn diện để giải quyết 
+        các vấn đề của hệ tiêu hóa. Chúng tôi cung cấp đa dạng các thủ thuật chẩn đoán và điều trị tiên tiến. Trung tâm nội soi được trang bị đầy đủ thiết bị hiện đại, 
+        bao gồm máy nội soi video tân tiến cho hình ảnh phân giải cao, giúp phát hiện sớm, chẩn đoán chính xác và điều trị hiệu quả các bệnh lý tiêu hóa. Dịch vụ của chúng tôi bao gồm:.</p>
+      <div class="modal-grid">
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/8.png') }}" alt="">
+            <h4>Nội soi dạ dày:</h4>
+            <p>Sử dụng một ống dài, mỏng và linh hoạt có gắn camera nhằm kiểm tra phần trên của hệ tiêu hóa, bao gồm họng, thực quản và dạ dày, từ đó giúp chẩn đoán và điều trị các rối loạn tiêu hóa.</p>
+          </div>
+        </div>
+        <div class="modal-col">
+          <div class="modal-section">
+            <img src="{{ url_for('static', filename='images/9.png') }}" alt="">
+            <h4>Nội soi đại tràng:</h4>
+            <p>Sử dụng một ống dài, mỏng và linh hoạt có gắn camera nhằm kiểm tra bên trong ruột và chẩn đoán nguyên nhân gây ra các triệu chứng về đường ruột.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === SCRIPT điều khiển modal === -->
+  <script>
+    // Mở modal tương ứng
+    document.querySelectorAll('.view-more').forEach(button => {
+      button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) modal.style.display = 'block';
+      });
+    });
+
+    // Đóng modal khi nhấn nút X
+    document.querySelectorAll('.close-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.closest('.modal').style.display = 'none';
+      });
+    });
+
+    // Đóng modal khi nhấn ra ngoài vùng content
+    window.onclick = e => {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+    };
+  </script>
+
+  <section class="insurance-section">
+    <h2>Đơn vị Bảo hiểm</h2>
+
+    <div class="logo-grid" id="logoGrid">
+      <!-- Danh sách logo (thêm hoặc bớt tuỳ theo thực tế) -->
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh1.png') }}" alt="Liberty"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh2.png') }}" alt="BAKCO"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh3.png') }}" alt="PJICO"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh4.png') }}" alt="MIC"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh5.png') }}" alt="WellBe"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh6.png') }}" alt="Manulife"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh7.png') }}" alt="Manulife"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh8.png') }}" alt="Manulife"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh9.png') }}" alt="Manulife"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh10.png') }}" alt="Manulife"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh11.png') }}" alt="Manulife"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh12.png') }}" alt="Manulife"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh13.png') }}" alt="Manulife"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh14.png') }}" alt="Manulife"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh15.png') }}" alt="Manulife"></div>
+      <div class="logo-box"><img src="{{ url_for('static', filename='images/bh16.png') }}" alt="Manulife"></div>
+      <!-- Logo ẩn ban đầu -->
+      <div class="logo-box hidden"><img src="{{ url_for('static', filename='images/bh9.png') }}" alt="Prudential"></div>
+      <div class="logo-box hidden"><img src="{{ url_for('static', filename='images/bh10.png') }}" alt="Prudential"></div> 
+      <div class="logo-box hidden"><img src="{{ url_for('static', filename='images/bh11.png') }}" alt="Prudential"></div>
+      <div class="logo-box hidden"><img src="{{ url_for('static', filename='images/bh12.png') }}" alt="AIA"></div>
+      <div class="logo-box hidden"><img src="{{ url_for('static', filename='images/bh13.png') }}" alt="Sun Life"></div>
+      <div class="logo-box hidden"><img src="{{ url_for('static', filename='images/bh14.png') }}" alt="MB Ageas"></div>
+      <div class="logo-box hidden"><img src="{{ url_for('static', filename='images/bh15.png') }}" alt="CHUBB"></div>
+      <div class="logo-box hidden"><img src="{{ url_for('static', filename='images/bh16.png') }}" alt="Tokio Marine"></div>
+    </div>
+
+    <div class="toggle-btn-container"><button id="toggleBtn">Xem thêm</button></div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.getElementById('toggleBtn');
+      const hiddenLogos = document.querySelectorAll('.logo-box.hidden');
+      let expanded = false;
+
+      toggleBtn.addEventListener('click', () => {
+        hiddenLogos.forEach(logo => {
+          logo.style.display = expanded ? 'none' : 'block';
+        });
+
+        toggleBtn.textContent = expanded ? 'Xem thêm' : 'Thu gọn';
+        expanded = !expanded;
+      });
+    });
+  </script>
+
+<section class="booking-section">
+  <div class="booking-container">
+    <div class="booking-form">
+      <h2>Đặt lịch hẹn</h2>
+      <form action="DatLich.php" method="POST">
+        <div class="form-columns">
+          <!-- Thông tin khách hàng -->
+          <div class="form-column">
+            <h3>Thông tin khách hàng</h3>
+            <input type="text" name="name" placeholder="Họ và Tên" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="tel" name="phone" placeholder="Số điện thoại" required />
+            <input type="text" name="address" placeholder="Địa chỉ" />
+            <input type="date" name="dob" placeholder="Ngày sinh" />
+            <div class="gender">
+              <label><input type="radio" name="gender" value="Nam" /> Nam</label>
+              <label><input type="radio" name="gender" value="Nữ" /> Nữ</label>
+            </div>
+          </div>
+
+          <!-- Chuyên khoa -->
+          <div class="form-column">
+            <h3>Chuyên khoa</h3>
+            <input type="text" name="hospital_type" placeholder="Bệnh viện hay Phòng khám" />
+            <select name="department" required>
+              <option disabled selected value="">Chuyên khoa</option>
+              <option value="Nội tổng quát">Nội tổng quát</option>
+              <option value="Nhi">Nhi</option>
+              <option value="Sản">Sản</option>
+            </select>
+            <textarea name="additional_info" placeholder="Thông tin bổ sung"></textarea>
+
+            <h3>Ngày giờ ưu tiên</h3>
+            <input type="datetime-local" name="appointment_datetime" required />
+
+            <p class="note">
+              Bằng cách nhấn nút đăng ký, tôi xác nhận đã đọc và đồng ý với các
+              <a href="#">Chính Sách Quyền Riêng Tư</a>.
+            </p>
+
+            <button type="submit">Đăng Ký</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Hình ảnh -->
+    <div class="booking-image">
+      <img src="{{ url_for('static', filename='images/datlich.png') }}" alt="Hình ảnh hỗ trợ" />
+    </div>
+  </div>
+</section>
+
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <!-- Cột 1: Logo + thông tin liên hệ -->
+        <div class="footer-col">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="footer-logo">
+        <div class="footer-contact">
+            <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+            <hr>
+            <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+            <i class="fa fa-phone"></i> 1900 6765</p>
+        </div>
+        </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png') }}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>
