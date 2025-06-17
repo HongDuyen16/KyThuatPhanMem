@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bác sĩ Dương Thanh Hiền</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bs.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+      <span>HP<br><small>Care</small></span>
+    </div>
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+  </header>
+
+<div class="doctor-profile">
+  <div class="profile-header">
+    <div class="profile-left">
+      <img src="{{ url_for('static', filename='images/bs1.png')}}" alt="Bác sĩ Dương Thanh Hiền" class="doctor-img">
+      <div class="action-buttons">
+        <a href="{{ url_for('dat_lich') }}" class="btn-primary">Đặt lịch hẹn</a>
+        <a href="#" class="btn-secondary">Quay lại trang tìm kiếm</a>
+      </div>
+    </div>
+
+    <div class="profile-right">
+      <h2>BS.CKII. Dương Thanh Hiền</h2>
+      <p class="position">Bác sĩ Sản - Phụ Khoa</p>
+
+      <h3>Chuyên khoa: Sản Phụ Khoa</h3>
+      <p>
+        BSCKII. Dương Thanh Hiền là chuyên gia Sản – Phụ khoa đã có hơn 33 năm kinh nghiệm trong lĩnh vực chăm sóc sức khỏe phụ nữ. Tốt nghiệp Bác sĩ Đa khoa tại Đại học Y Dược Thành 
+        phố Hồ Chí Minh năm 1992, bác sĩ Hiền tiếp tục nâng cao năng lực chuyên môn khi tốt nghiệp bác sĩ chuyên khoa cấp 2 Sản – Phụ khoa tại cùng trường.​      
+      </p>
+
+      <div class="profile-body">
+        <p>Với sứ mệnh đồng hành cùng phụ nữ trong hành trình làm mẹ và chăm sóc sức khỏe sinh sản, BSCKII Dương Thanh Hiền luôn tận tâm, nhiệt huyết trong công tác chuyên môn: ​</p>
+        <ul>
+          <li>Chăm sóc sức khỏe phụ khoa.</li>
+          <li>Điều trị các bệnh phụ khoa phức tạp.</li>  
+          <li>Quản lý và theo dõi thai kỳ sau nguy cơ cao như ngôi bất thường, nhau tiền đạo, rau cài răng lược, vết mổ cũ...</li>
+          <li>Mổ lấy thai an toàn, đặc biệt trong các trường hợp thai phụ có bệnh lý phức tạp ​
+                Bên cạnh đó, BS.CKII Dương Thanh Hiền còn tham gia nghiên cứu khoa học, chia sẻ kiến thức chuyên môn tại các hội nghị y khoa và đóng góp vào sự phát triển của ngành Sản – Phụ khoa tại Việt Nam. Bác sĩ cũng là thành viên
+                tích cực của các Hiệp hội Sản – Phụ khoa trong nước, góp phần xây dựng mạng lưới hợp tác chuyên môn rộng khắp nhằm nâng cao chất lượng dịch vụ y tế cho phụ nữ Việt Nam.
+          ​</li>
+        </ul>
+
+        <h3>Chứng nhận và thành tựu</h3>
+        <ul>
+          <li>Chứng chỉ quản lý bệnh viện</li>
+          <li>Chứng chỉ soi cổ tử cung</li>
+          <li>Phẫu thuật phụ khoa qua nội soi</li>
+          <li>Đái tháo đường thai kỳ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo + thông tin liên hệ -->
+    <div class="footer-col">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+      <div class="footer-contact">
+        <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+        <hr>
+        <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+      </div>
+    </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>

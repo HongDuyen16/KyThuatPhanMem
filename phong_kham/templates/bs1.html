@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bác sĩ Nguyễn Thị Thu Thủy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bs.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+      <span>HP<br><small>Care</small></span>
+    </div>
+    <nav class="main-nav">
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+  </header>
+
+<div class="doctor-profile">
+  <div class="profile-header">
+    <div class="profile-left">
+      <img src="{{ url_for('static', filename='images/bs1.png')}}" alt="Bác sĩ Nguyễn Thị Thu Thủy" class="doctor-img">
+      <div class="action-buttons">
+        <a href="{{ url_for('dat_lich') }}" class="btn-primary">Đặt lịch hẹn</a>
+        <a href="#" class="btn-secondary">Quay lại trang tìm kiếm</a>
+      </div>
+    </div>
+
+    <div class="profile-right">
+      <h2>BS.CKII. Nguyễn Thị Thu Thủy</h2>
+      <p class="position">Bác sĩ Tiêu hóa Nhi</p>
+
+      <h3>Chuyên khoa: Nhi khoa</h3>
+      <p>
+        BS.CKII Nguyễn Thị Thu Thủy là chuyên gia về Nhi khoa, với hơn 20 năm kinh nghiệm trong lĩnh vực Tiêu hóa – Gan mật – Dinh dưỡng trẻ em,
+        là bác sĩ chuyên khoa 2 đầu ngành về lĩnh vực nội soi tiêu hóa Nhi, là hội Nội soi Tiêu hóa Việt Nam.
+      </p>
+
+      <div class="profile-body">
+        <h3>Quá trình công tác</h3>
+        <ul>
+          <li>
+            Bác sĩ Thủy công tác tại khoa Tiêu hóa bệnh viện Nhi Đông 2 ngay từ những ngày đầu tiên  sau tốt nghiệp Bác sĩ Y khoa Đại học Y Dược TP.HCM năm 2001. 
+            Bác sĩ luôn không ngừng học tập, nâng cao trình độ chuyên môn, khẳng định vị thế bác sĩ có trình độ chuyên môn giỏi với 2 tấm bằng tốt nghiệp bác sĩ Chuyên khoa I 
+            Nhi và Chuyên khoa II chuyên ngành Tiêu hóa Nhi đều xếp loại giỏi tại Đại học Y dược Thành phố Hồ Chí Minh.​
+          </li>
+          <li>Sau hơn 20 năm công tác, BSCKII. Nguyễn Thị Thu Thủy hiện là cánh chim đầu đàn cho nhiều thế hệ bác sĩ trẻ theo sau, tham gia công tác giảng dạy, hướng dẫn lâm sàng 
+            cho sinh viên, bác sĩ nội trú, bác sĩ chuyên khoa 1… của nhiều trường liên kết Trường – Viện và hiện tại là bác sĩ phó trưởng khoa, quyền quản lý khoa Tiêu hóa Bệnh viện Nhi Đồng 2.
+          ​</li>  
+        </ul>
+
+        <h3>Chuyên môn</h3>
+        <p>Khám tổng quát, tầm soát bệnh lý tiêu hóa trẻ em:​ Theo dõi tăng trưởng, tư vấn dinh dưỡng, tầm soát bệnh lý đường tiêu hóa</p>
+        <p>Bệnh tiêu hóa cấp tính như:​ Đau bụng cấp, viêm dạ dày-ruột cấp, ngộ độc, rối loạn tiêu hóa…​</p>
+        <p>Bệnh tiêu hóa kéo dài, mạn tính, tái lại nhiều lần, có tính phức tạp như:​ Đau bụng mạn, viêm loét dạ dày–tá tràng, trào ngược dạ dày thực quản, táo bón, tiêu chảy kéo dài, dị ứng sữa, vàng da kéo dài…​</p>
+        <p> Bệnh tự miễn đường tiêu hóa: Viêm ruột tự miễn, bệnh Crohn trẻ em, viêm đại tràng…​</p>
+
+        <h3>Chứng nhận và thành tựu</h3>
+        <ul>
+          <li>Chứng chỉ Nội soi Dạ dày tá tràng</li>
+          <li>Chứng chỉ Nội soi Đại tràng</li>
+          <li>Chứng chỉ Nội soi điều trị</li>
+          <li>Chứng chỉ Siêu âm tổng quát</li>
+          <li> Chứng chỉ Dinh dưỡng lâm sàn</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo + thông tin liên hệ -->
+    <div class="footer-col">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+      <div class="footer-contact">
+        <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+        <hr>
+        <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+      </div>
+    </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>

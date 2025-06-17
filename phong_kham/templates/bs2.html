@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bác sĩ Trần Tấn Lộc</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bs.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+      <span>HP<br><small>Care</small></span>
+    </div>
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+  </header>
+
+<div class="doctor-profile">
+  <div class="profile-header">
+    <div class="profile-left">
+      <img src="{{ url_for('static', filename='images/bs2.png')}}" alt="Bác sĩ Trần Tấn Lộc" class="doctor-img">
+      <div class="action-buttons">
+        <a href="{{ url_for('dat_lich') }}" class="btn-primary">Đặt lịch hẹn</a>
+        <a href="#" class="btn-secondary">Quay lại trang tìm kiếm</a>
+      </div>
+    </div>
+
+    <div class="profile-right">
+      <h2>ThS.BSCKI. Trần Tấn Lộc</h2>
+      <p class="position">Bác sĩ Ngoại Nhi</p>
+
+      <h3>Chuyên khoa: Nhi khoa</h3>
+      <p>
+      </p>
+
+      <div class="profile-body">
+        <h3>Quá trình công tác</h3>
+        <ul>
+          <li>
+            Tốt nghiệp Đại học Y khoa Phạm Ngọc Thạch năm 2016, bác sĩ Lộc tiếp tục chương trình đào tạo bác sĩ nội trú Ngoại Nhi tại Đại học Y Dược TP.HCM và tốt nghiệp năm 2019 với ba tấm bằng:
+             Thạc sĩ, bác sĩ nội trú và bác sĩ chuyên khoa 1 Ngoại Nhi. Bác sĩ từng công tác tại khoa Ngoại Tổng hợp bệnh viện Nhi Đồng TP.HCM và tu nghiệp tại bệnh viện Nhi Alabama, Đại học Y khoa
+              Alabama, Hoa kỳ trong lĩnh vực phẫu thuật nhi và phẫu thuật nội soi sơ sinh và trẻ nhỏ. bác sĩ đã có kinh nghiệm tham gia nhiều ca phẫu thuật lớn, đặc biệt là phẫu thuật tách dính song sinh.
+          </li>
+        </ul>
+
+        <h3>Chuyên môn</h3>
+        <p> Điều trị các bệnh lý sơ sinh, ung bướu, chấn thương nhi khoa như: Nang ống mật chủ, thoát vị hoành, teo thực quản, tắc tá tràng, teo ruột non, ruột xoay bất toàn, thoát vị bẹn, nang thửng tinh,
+            teo thực quản, nang giáp lưỡi, tinh hoàn ẩn, hạch ẩn sau chích BCG.
+        </p>
+        <p>Hỗ trợ điều trị các trường hợp chấn thương, gãy xương, tổn thương mềm ở trẻ em.​</p><br>
+        <p>Ngoài vai trò bác sĩ, bác sĩ còn là người thầy tận tụy, đóng góp cho nghiên cứu khoa học và đào tạo thế hệ trẻ. Với mong muốn nâng cao chất lượng y tế và mang đến những phương pháp điều trị tiên tiến nhất, 
+            bác sĩ luôn không ngừng học hỏi và chia sẻ kiến thức, góp phần vào sự phát triển của ngành Ngoại Nhi tại Việt Nam. </p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo + thông tin liên hệ -->
+    <div class="footer-col">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+      <div class="footer-contact">
+        <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+        <hr>
+        <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+      </div>
+    </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>

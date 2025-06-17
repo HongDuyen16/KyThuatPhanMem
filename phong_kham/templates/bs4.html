@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bác sĩ Nguyễn Nhật Nam</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bs.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo Hanh Phuc">
+      <span>HP<br><small>Care</small></span>
+    </div>
+    <nav class="main-nav">
+        <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a class="appointment" href="{{ url_for('dat_lich') }}">Đặt lịch hẹn</a></li>
+        <li><a href="#">VN <i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="fas fa-search" title="Tìm kiếm"></i></a></li>
+        </ul>
+    </nav>
+  </header>
+
+<div class="doctor-profile">
+  <div class="profile-header">
+    <div class="profile-left">
+      <img src="{{ url_for('static', filename='images/bs4.png')}}" alt="Bác sĩ Nguyễn Nhật Nam" class="doctor-img">
+      <div class="action-buttons">
+        <a href="{{ url_for('dat_lich') }}" class="btn-primary">Đặt lịch hẹn</a>
+        <a href="#" class="btn-secondary">Quay lại trang tìm kiếm</a>
+      </div>
+    </div>
+
+    <div class="profile-right">
+      <h2>TS.BS. Nguyễn Nhật Nam</h2>
+      <p class="position">Bác sĩ Nội tiết</p>
+
+      <p>
+        TS.BS. Nguyễn Nhật Nam được biết đến là một bác sĩ uy tín trong lĩnh vực Nội tiết, đặc biệt là các bệnh lý nội tiết ở trẻ em, phụ nữ và người lớn với hơn 09 năm kinh nghiệm.
+        TS.BS. Nguyễn Nhật Nam tốt nghiệp Bác sĩ Đa khoa tại Đại học Y Dược TP.HCM, sau đó hoàn thành chương trình Bác sĩ Nội trú chuyên ngành Nội tiết tại cùng trường và tốt nghiệp Tiến sĩ 
+        tại Đại học Y Đài Bắc, Đài Loan – top 500 trường đại học thế giới.      
+      </p>
+
+      <div class="profile-body">
+        <h3>Chuyên tư vấn, khám và điều trị:</h3>
+        <ul>
+          <li>Trẻ em: Dậy thì sớm, chậm tăng trưởng, đại tháo đường, bệnh lý tuyến giáp ...</li>
+          <li>Phụ nữ: Đái tháo đường thai kỳ, nhiễm độc tuyến giáp, suy giáp thai kỳ, viêm giáp sau sinh ...​</li>  
+          <li>Người lớn: Đái tháo đường, bệnh lý tuyến giáp, tuyến yên, tuyến thượng thận.</li>
+        </ul>
+
+        <h3>Chuyên môn</h3>
+        <p>TS.BS. Nguyễn Nhật Nam có thế mạnh nổi bật trong chẩn đoán và điều trị bệnh lý dậy thì sớm ở trẻ em, giúp trẻ bảo tồn được chiều cao lý tưởng khi trưởng thành, giảm nguy cơ các
+             rối loạn chuyển hóa trong tương lai và hạn chế thay đổi về mặt tâm lý khi trẻ phải đối mặt với các triệu chứng dậy thì ở độ tuổi sớm hơn thông thường.​</p>
+
+        <h3>Kinh nghiệm làm việ<!--[if !IE]><!--><!--<![endif]--></h3>
+        <p>
+            TS. BS Nguyễn Nhật Nam luôn tích cực tham gia các hoạt động nghiên cứu và điều trị chuyên sâu trong lĩnh vực nội tiết; Đạt nhiều chứng nhận/giải thưởng tài trợ cho báo cáo tại
+            Hội nghị Nội tiết Hoa Kỳ, Hội nghị Đái tháo đường Hoa Kỳ, Hội nghị Đái tháo đường châu Âu, Hội nghị Dinh dưỡng Lâm sàng và Chuyển hóa châu Âu… Từ năm 2022, bác sĩ chính thức
+            trở thành thành viên của Hội Nội tiết Hoa Kỳ, và gia nhập Hiệp hội Đái tháo đường Hoa Kỳ vào năm 2024, từng bước khẳng định vị thế quốc tế của mình trong lĩnh vực này.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Cột 1: Logo + thông tin liên hệ -->
+    <div class="footer-col">
+      <img src="{{ url_for('static', filename='images/logo.png')}}" alt="Logo" class="footer-logo">
+      <div class="footer-contact">
+        <p><strong>Phòng Khám Hạnh Phúc</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+        <hr>
+        <p><strong>Phòng khám Đa khoa Quốc tế Hạnh Phúc (Estella)</strong><br>
+          <i class="fa fa-phone"></i> 1900 6765</p>
+      </div>
+    </div>
+
+    <!-- Cột 2: Các liên kết -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="VeChungToi.html">Về chúng tôi</a></li>
+        <li><a href="ChuyenKhoa.html">Chuyên khoa</a></li>
+        <li><a href="BacSi.html">Bác sĩ</a></li>
+        <li><a href="GoiKham.html">Gói khám</a></li>
+        <li><a href="#">IVF Hanh Phuc</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 3: Thông tin & Chính sách -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Thông tin y khoa</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="LienHe.html">Liên hệ</a></li>
+        <li><a href="#">Quyền riêng tư</a></li>
+      </ul>
+    </div>
+
+    <!-- Cột 4: Kết nối mạng xã hội -->
+    <div class="footer-col">
+      <p>Kết nối với chúng tôi</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/zalo.png')}}" alt="Zalo" class="zalo-icon"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Hanh Phuc International</p>
+  </div>
+</footer>
+</body>
+</html>
